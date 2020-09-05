@@ -64,6 +64,8 @@ if [ $SERVER = 'django-server' ]; then
 	$BASE_DIR/manage.py runserver 0.0.0.0:$PORT
 elif [ $SERVER = 'uwsgi' ]; then
 	${uWSGI}:uwsgi
+elif [ $SERVER = 'uwsgi-unix-socket' ]; then
+  ${uWSGI}:uwsgi-unix-socket
 elif [ $SERVER = 'http-socket' ]; then
 	${uWSGI}:http-socket
 #elif [ $SERVER = 'http2' ]; then
